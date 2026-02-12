@@ -84,3 +84,15 @@ binance_trading_bot/
     ├── client.py           # Binance API wrapper & logic
     ├── config.py           # Configuration loader
     └── logging_config.py   # Logging setup
+```
+Assumptions
+Environment: The bot is configured for the Binance Futures Testnet/Demo environment. It will not execute trades on the mainnet.
+
+Network: The user has a stable internet connection to reach https://testnet.binancefuture.com or https://demo-fapi.binance.com.
+
+Minimum Order Size: The Binance Testnet often rejects orders smaller than 100 USDT in value. The user must ensure --qty is sufficient (e.g., 0.002 BTC).
+
+Time in Force: All LIMIT orders use GTC (Good Till Cancelled) by default.
+
+Logs
+Detailed logs of every operation can be found in: logs/trading_bot.log
