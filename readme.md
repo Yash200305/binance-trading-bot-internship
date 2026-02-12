@@ -43,13 +43,34 @@ Run the bot using `main.py` with the required arguments.
 Executes immediately at the current market price.
 ```bash
 python main.py --symbol BTCUSDT --side BUY --type MARKET --qty 0.002
+```
 
-### 2. Place a LIMIT Order
-Places an order at a specific price. Requires the `--price` argument.
+### 1. Place a LIMIT order
+Places an order at a specific price. Requires the --price argument.
 ```bash
 python main.py --symbol BTCUSDT --side SELL --type LIMIT --qty 0.002 --price 95000
+```
 
-Command Line ArgumentsArgumentTypeRequiredDescription--symbolstrYesTrading pair (e.g., BTCUSDT, ETHUSDT)--sidestrYesOrder side: BUY or SELL--typestrYesOrder type: MARKET or LIMIT--qtyfloatYesQuantity to trade (Must be > $100 value on Testnet)--pricefloatNoTarget price (Required only for LIMIT orders)Project StructurePlaintextbinance_trading_bot/
+---
+
+### **Chunk 2: The Rest of the File (Paste this BELOW the Usage section)**
+This part contains the table and project structure.
+
+```markdown
+### Command Line Arguments
+
+| Argument | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `--symbol` | str | Yes | Trading pair (e.g., BTCUSDT, ETHUSDT) |
+| `--side` | str | Yes | Order side: `BUY` or `SELL` |
+| `--type` | str | Yes | Order type: `MARKET` or `LIMIT` |
+| `--qty` | float | Yes | Quantity to trade (Must be > $100 value on Testnet) |
+| `--price` | float | No | Target price (Required only for `LIMIT` orders) |
+
+## Project Structure
+
+```text
+binance_trading_bot/
 │
 ├── .env                    # Environment variables (API Keys)
 ├── requirements.txt        # Python dependencies
@@ -63,4 +84,3 @@ Command Line ArgumentsArgumentTypeRequiredDescription--symbolstrYesTrading pair 
     ├── client.py           # Binance API wrapper & logic
     ├── config.py           # Configuration loader
     └── logging_config.py   # Logging setup
-AssumptionsEnvironment: The bot is configured for the Binance Futures Testnet/Demo environment. It will not execute trades on the mainnet.Network: The user has a stable internet connection to reach https://testnet.binancefuture.com or https://demo-fapi.binance.com.Minimum Order Size: The Binance Testnet often rejects orders smaller than 100 USDT in value. The user must ensure --qty is sufficient (e.g., 0.002 BTC).Time in Force: All LIMIT orders use GTC (Good Till Cancelled) by default.LogsDetailed logs of every operation can be found in:logs/trading_bot.log
