@@ -18,7 +18,7 @@ A simplified command-line interface (CLI) trading bot for the Binance Futures Te
 1.  **Clone or Download the Repository**
     ```bash
     # If using git
-    git clone <repository-url>
+    git clone https://github.com/Yash200305/binance-trading-bot-internship.git
     cd binance_trading_bot
     ```
 
@@ -31,8 +31,8 @@ A simplified command-line interface (CLI) trading bot for the Binance Futures Te
 3.  **Configure API Keys**
     Create a file named `.env` in the root directory and add your Testnet API credentials:
     ```ini
-    BINANCE_TESTNET_API_KEY=your_api_key_here
-    BINANCE_TESTNET_SECRET_KEY=your_secret_key_here
+    BINANCE_TESTNET_API_KEY=CxF8qLPOB0W4mnunn2iTHXoShsRE6XSuSvCCG0E5HU4TIdJFCbzbgDHBQoHQH0Td
+    BINANCE_TESTNET_SECRET_KEY=NurJ9uOCZzLopIgfrIoiTbI9fXxkDy6KnSTXHS47F0rlGZKeHXGoBX5gjeq3zvPI
     ```
 
 ## [cite_start]Usage [cite: 40]
